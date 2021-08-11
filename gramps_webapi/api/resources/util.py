@@ -182,6 +182,7 @@ def get_event_profile_for_object(
     result = {
         "type": locale.translation.sgettext(event.type.xml_str()),
         "date": locale.date_displayer.display(event.date),
+        "description": event.description),
         "place": pd.display_event(db_handle, event),
     }
     if role is not None:
